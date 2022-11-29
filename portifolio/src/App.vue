@@ -35,7 +35,6 @@
 
     <v-main>
       <HelloWorld />
-      <v-input>
     </v-main>
   </v-app>
 </template>
