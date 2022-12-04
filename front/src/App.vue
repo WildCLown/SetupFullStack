@@ -22,15 +22,18 @@
       </div>
 
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-layout>
+        <v-flex mr-5>
+          <v-btn
+            href="https://github.com/vuetifyjs/vuetify/releases/latest"
+            target="_blank"
+            text
+          >
+            <span class="mr-2">Latest Release</span>
+            <v-icon>mdi-open-in-new</v-icon>
+          </v-btn>
+        </v-flex>
+      </v-layout>
     </v-app-bar>
 
     <v-main>

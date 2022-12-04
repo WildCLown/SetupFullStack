@@ -1,9 +1,10 @@
 version: '3.7'
 services:
   web:
-    build: .
+    build: ./front
+    container_name: Frontend-Docker-Gabriel-Teixeira
     ports:
      - "8080:8080"
     volumes:
-      - .:/usr/src/app
+      - ./front:/usr/src/app
     command: bash -c 'yarn && yarn serve'
