@@ -12,7 +12,7 @@
               width="60"
             />
             <label class="primaryText--text text-h4 font-weight-bold">
-              Gabriel Teixeira's Portifolio
+              Gabriel Teixeira's FullStack Setup
             </label>
             <div class="salve">Salve</div>
           </v-layout>
