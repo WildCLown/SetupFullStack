@@ -1,10 +1,14 @@
 FROM node:18-alpine
+RUN apk update && apk add bash
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+CMD bash
 
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
 
 RUN yarn global add @vue/cli
 RUN yarn install
 
-COPY . .
+COPY package.json yarn.lock /usr/src/app
+COPY . /usr/src/app
+
 CMD ["yarn", "start"]
