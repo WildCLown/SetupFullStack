@@ -1,151 +1,157 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+  <v-container class="fill-height">
+    <v-responsive
+      class="align-centerfill-height mx-auto"
+      max-width="900"
+    >
+      <v-img
+        class="mb-4"
+        height="150"
+        src="@/assets/logo.png"
+      />
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
+      <div class="text-center">
+        <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
+        <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+      </div>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+      <div class="py-4" />
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
+      <v-row>
+        <v-col cols="12">
+          <v-card
+            class="py-4"
+            color="surface-variant"
+            image="https://cdn.vuetifyjs.com/docs/images/one/create/feature.png"
+            prepend-icon="mdi-rocket-launch-outline"
+            rounded="lg"
+            variant="outlined"
           >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+            <template #image>
+              <v-img position="top right" />
+            </template>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
+            <template #title>
+              <h2 class="text-h5 font-weight-bold">Get started</h2>
+            </template>
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
+            <template #subtitle>
+              <div class="text-subtitle-1">
+                Replace this page by removing <v-kbd>{{ `<HelloWorld />` }}</v-kbd> in <v-kbd>pages/index.vue</v-kbd>.
+              </div>
+            </template>
+
+            <v-overlay
+              opacity=".12"
+              scrim="primary"
+              contained
+              model-value
+              persistent
+            />
+          </v-card>
+        </v-col>
+
+        <v-col cols="6">
+          <v-card
+            append-icon="mdi-open-in-new"
+            class="py-4"
+            color="surface-variant"
+            href="https://vuetifyjs.com/"
+            prepend-icon="mdi-text-box-outline"
+            rel="noopener noreferrer"
+            rounded="lg"
+            subtitle="Learn about all things Vuetify in our documentation."
             target="_blank"
+            title="Documentation"
+            variant="text"
           >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
+            <v-overlay
+              opacity=".06"
+              scrim="primary"
+              contained
+              model-value
+              persistent
+            />
+          </v-card>
+        </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
+        <v-col cols="6">
+          <v-card
+            append-icon="mdi-open-in-new"
+            class="py-4"
+            color="surface-variant"
+            href="https://vuetifyjs.com/introduction/why-vuetify/#feature-guides"
+            prepend-icon="mdi-star-circle-outline"
+            rel="noopener noreferrer"
+            rounded="lg"
+            subtitle="Explore available framework Features."
             target="_blank"
+            title="Features"
+            variant="text"
           >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
-    </v-row>
+            <v-overlay
+              opacity=".06"
+              scrim="primary"
+              contained
+              model-value
+              persistent
+            />
+          </v-card>
+        </v-col>
+
+        <v-col cols="6">
+          <v-card
+            append-icon="mdi-open-in-new"
+            class="py-4"
+            color="surface-variant"
+            href="https://vuetifyjs.com/components/all"
+            prepend-icon="mdi-widgets-outline"
+            rel="noopener noreferrer"
+            rounded="lg"
+            subtitle="Discover components in the API Explorer."
+            target="_blank"
+            title="Components"
+            variant="text"
+          >
+            <v-overlay
+              opacity=".06"
+              scrim="primary"
+              contained
+              model-value
+              persistent
+            />
+          </v-card>
+        </v-col>
+
+        <v-col cols="6">
+          <v-card
+            append-icon="mdi-open-in-new"
+            class="py-4"
+            color="surface-variant"
+            href="https://discord.vuetifyjs.com"
+            prepend-icon="mdi-account-group-outline"
+            rel="noopener noreferrer"
+            rounded="lg"
+            subtitle="Connect with Vuetify developers."
+            target="_blank"
+            title="Community"
+            variant="text"
+          >
+            <v-overlay
+              opacity=".06"
+              scrim="primary"
+              contained
+              model-value
+              persistent
+            />
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-responsive>
   </v-container>
 </template>
 
-<script>
-  export default {
-    name: 'HelloWorld',
-
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
+<script setup lang="ts">
+  //
 </script>
