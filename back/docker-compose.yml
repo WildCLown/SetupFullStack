@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/vendor
+    environment:
+      - GO_ENV=development
+      - GO111MODULE=on
+      - CGO_ENABLED=0

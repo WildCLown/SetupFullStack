@@ -1,10 +1,10 @@
-version: '3.7'
+version: "3.7"
 services:
   web:
     build: ./front
     container_name: Full-Stack-Vue-Docker-Gabriel-Teixeira
     ports:
-     - '3000:3000'
+      - "3000:3000"
     environment:
       - NODE_ENV=dev
     volumes:
